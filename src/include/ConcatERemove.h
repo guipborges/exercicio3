@@ -19,10 +19,10 @@ class ConcatERemove
         void iniciaConcatERemove();
     //----------------
     private:
-        void printAnswer(bool resp);
+      
         bool concatERemove(std::string s, std::string t, int k);
-        std::string generatesRandomString(void);
         bool checkIfAlphabets(std::string alphabeta);
+        void printAnswer(bool resp);
         void toLowerCase(std::string s);
 
 

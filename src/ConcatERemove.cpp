@@ -73,6 +73,24 @@ void ConcatERemove::getData(std::string &s, std::string &t, int &k)
 }
 //-------------------------------------------------------------------
 /*
+*   Main initialization method
+*
+*/
+void ConcatERemove::iniciaConcatERemove()
+{
+    //local variables
+    std::string s, t;
+    int k = 0;
+    //requests data from the user
+    getData(s, t, k); 
+    //checks if it is possible to achieve the goal
+    bool resp = concatERemove(s, t, k);
+    //print
+    printAnswer(resp);
+
+}
+//-------------------------------------------------------------------
+/*
 *   Concat and Remove
 *
 */
@@ -119,41 +137,7 @@ bool ConcatERemove::concatERemove(std::string s, std::string t, int k)
     }
     return true;
 }
-//-------------------------------------------------------------------
-/*
-*   Main initialization method
-*
-*/
-void ConcatERemove::iniciaConcatERemove()
-{
-    //local variables
-    std::string s, t;
-    int k = 0;
-    //requests data from the user
-    getData(s, t, k); 
-    //checks if it is possible to achieve the goal
-    bool resp = concatERemove(s, t, k);
-    //print
-    printAnswer(resp);
 
-}
-//-------------------------------------------------------------------
-/*
-*   Prints answer
-*
-*/
-void ConcatERemove::printAnswer(bool resp)
-{
-    if (resp == false)
-    {
-       std::cout<< "nao" << std::endl;
-    }
-
-    if (resp == true)
-    {
-        std::cout<< "sim" << std::endl;
-    }
-}
 //----------------------------------------------------------------------
 /* 
 *  Checking for alphabet
@@ -174,6 +158,23 @@ bool ConcatERemove::checkIfAlphabets(std::string alphabeta)
         i++;
     }
     return true;
+}
+//-------------------------------------------------------------------
+/*
+*   Prints answer
+*
+*/
+void ConcatERemove::printAnswer(bool resp)
+{
+    if (resp == false)
+    {
+       std::cout<< "nao" << std::endl;
+    }
+
+    if (resp == true)
+    {
+        std::cout<< "sim" << std::endl;
+    }
 }
 //----------------------------------------------------------------------
 /* 
